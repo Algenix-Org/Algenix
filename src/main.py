@@ -69,7 +69,6 @@ def recommend_products(user_input):
 
     return f"Here are some products you might like: {', '.join(recommended)}"
 
-# Update the response generation with product recommendations
 def generate_response(user_input):
     # Combine the order status and product recommendations
     if "order" in user_input.lower():
@@ -79,3 +78,19 @@ def generate_response(user_input):
     
     recommendations = recommend_products(user_input)
     return f"{recommendations} Can I help with anything else?"
+
+def translate_to_english(user_input):
+    # Use OpenAI's language model to translate text (or integrate a translation API)
+    prompt = f"Translate the following text into English: {user_input}"
+    response = openai.Completion.create(
+        model="gpt-4",
+        prompt=prompt,
+        temperature=0.3,
+        max_tokens=200
+    )
+    return response.choices[0].text.strip()
+
+def handle_customer_query(user_input, language="en"):
+    if language != "en":
+        user_input = translate_to_english(user_input)
+    return generate_response(user_input)
