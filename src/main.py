@@ -51,3 +51,31 @@ def extract_order_id(user_input):
     # Logic to extract order ID (could use regex or keyword-based extraction)
     return "12345"
 
+def recommend_products(user_input):
+    # A simple recommendation engine: You can integrate your product catalog here
+    products = [
+        {"id": 1, "name": "Wireless Headphones", "category": "Electronics"},
+        {"id": 2, "name": "Running Shoes", "category": "Sportswear"},
+        {"id": 3, "name": "Bluetooth Speaker", "category": "Electronics"}
+    ]
+    
+    # Example: Recommend products based on a keyword in the query
+    if "headphones" in user_input.lower():
+        recommended = [product["name"] for product in products if "headphones" in product["name"].lower()]
+    elif "shoes" in user_input.lower():
+        recommended = [product["name"] for product in products if "shoes" in product["name"].lower()]
+    else:
+        recommended = [product["name"] for product in products]
+
+    return f"Here are some products you might like: {', '.join(recommended)}"
+
+# Update the response generation with product recommendations
+def generate_response(user_input):
+    # Combine the order status and product recommendations
+    if "order" in user_input.lower():
+        order_id = extract_order_id(user_input)
+        order_status = get_order_status(order_id)
+        return f"Your order #{order_id} is currently {order_status}. Need anything else?"
+    
+    recommendations = recommend_products(user_input)
+    return f"{recommendations} Can I help with anything else?"
