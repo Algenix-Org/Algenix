@@ -5,6 +5,10 @@ import requests
 shopify_api_key = "your_shopify_api_key"
 shopify_store_url = "yourshopifystore.myshopify.com"
 
+## Openai API
+
+openai_api_key=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
+
 def get_order_status(order_id):
     url = f"https://{shopify_store_url}/admin/api/2024-01/orders/{order_id}.json"
     headers = {
