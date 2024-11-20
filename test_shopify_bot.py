@@ -1,6 +1,5 @@
 # Original code (place this at the top of the test file)
 import __main__ as main
-import data as data
 
 def get_order_status(order_id):
     url = f"https://{shopify_store_url}/admin/api/2024-01/orders/{order_id}.json"
