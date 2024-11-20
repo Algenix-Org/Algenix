@@ -1,8 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
-# Assuming the original code is in a file named shopify_bot.py
-# from shopify_bot import get_order_status, handle_customer_query, recommend_products, translate_to_english
 
 class TestShopifyBot(unittest.TestCase):
 
