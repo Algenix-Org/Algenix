@@ -1,4 +1,3 @@
-import openai
 import requests
 
 # Shopify API credentials (example)
