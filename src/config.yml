@@ -1,0 +1,6 @@
+agents:
+  - name: ecommerce_agent
+    module: agents.ecommerce_agent
+    class: EcommerceAgent
+    parameters:
+      agent_id: ecommerce_agent

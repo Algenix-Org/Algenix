@@ -10,3 +10,4 @@ Algenix is a prototype allows people use AI Agents custom be for diverses sector
 
 - [x] Unit tests
 - [ ] FOSS
+- [x] Multi-Agent
