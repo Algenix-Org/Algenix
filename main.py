@@ -1,4 +1,6 @@
 import requests
+import openai
+
 
 # Shopify API credentials (example)
 shopify_api_key = "your_shopify_api_key"
