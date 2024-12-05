@@ -8,7 +8,7 @@ shopify_store_url = "yourshopifystore.myshopify.com"
 
 ## Openai API
 
-openai.api_key = "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"
+openai.api_key = ""
 
 def get_order_status(order_id):
     url = f"https://{shopify_store_url}/admin/api/2024-01/orders/{order_id}.json"
