@@ -9,5 +9,4 @@ Algenix is a prototype allows people use AI Agents custom be for diverses sector
 ## Roadmap
 
 - [ ] FOSS
-- [ ] UI
-- [ ] Docs
+- [x] Docs
